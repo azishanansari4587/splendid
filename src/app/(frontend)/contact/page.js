@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import first from '@/public/LOGO1.png'
+import first from '@/assets/SCE.png'
 const Contact = () => {
   return (
     <div>
