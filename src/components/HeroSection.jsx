@@ -1,12 +1,13 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero.jpg";
+
 
 const HeroSection = () => {
   return (
     <section className="relative h-[600px] md:h-[700px] overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${'/hero.jpg'})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
       </div>

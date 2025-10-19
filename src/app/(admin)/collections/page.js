@@ -148,7 +148,7 @@ const ViewCollections = () => {
             <h1 className="text-3xl font-serif font-bold text-forest-800">Collections</h1>
           </div>
           <Button asChild className="bg-primary hover:bg-forest-800">
-            <Link href="/collections/add_collections" className="flex items-center gap-2">
+            <Link href="/collections/addCollections" className="flex items-center gap-2">
               <Plus className="h-4 w-4" /> Add Collection
             </Link>
           </Button>
@@ -306,9 +306,6 @@ const ViewCollections = () => {
         </DialogContent>
       </Dialog>
 
-
-
-
       {/* Delete Dialog */}
       <Dialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <DialogOverlay className="bg-black/50 backdrop-blur-sm fixed inset-0" />
@@ -322,6 +319,8 @@ const ViewCollections = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+
+
     </div>
   );
 }

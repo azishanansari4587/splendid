@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Logo from "@/assets/SCE.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,19 +22,42 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-card">
       {/* Top banner */}
       <div className="bg-primary text-primary-foreground py-2 px-4 text-center text-sm">
-        Free Shipping on Orders Over $99
-      </div>
+        <ul className="flex justify-center gap-6">
+          <li>
+            <Link 
+              href="/contact" 
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/about" 
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/customize" 
+              className="hover:text-amber-500 transition-colors duration-300"
+            >
+              Customize Rugs
+            </Link>
+          </li>
+        </ul>
+      </div> 
+
 
       {/* Main header */}
       <div className="container mx-auto p-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-1 flex items-center">
-            {/* <a href="/" className="text-2xl font-serif font-bold tracking-tight">
-              LOLOI RUGS
-            </a> */}
+          <Link href={"/"} className="flex-1 flex items-center">
             <Image src={Logo} alt="Logo" width={100} height={100} className="object-cover"/>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex flex-1 justify-center">
@@ -98,7 +122,7 @@ const Header = () => {
               <Search className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" className="hidden md:flex">
-              <User className="h-5 w-5" />
+              <Link href={"/signin"}><User className="h-5 w-5" /></Link>
             </Button>
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingBag className="h-5 w-5" />

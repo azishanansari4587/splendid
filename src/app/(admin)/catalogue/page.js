@@ -47,7 +47,7 @@ const ViewCatalogues = () => {
                 <h1 className="text-3xl font-serif font-bold text-forest-800">Catalogue</h1>
             </div>
             <Button asChild className="bg-primary hover:bg-forest-800">
-                <Link href="/catalogue/add_catalogue" className="flex items-center gap-2">
+                <Link href="/catalogue/addCatalogue" className="flex items-center gap-2">
                 <Plus className="h-4 w-4" /> Add Catalogue
                 </Link>
             </Button>

@@ -47,33 +47,46 @@ export default function CollectionPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
+
+      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8 h-auto md:h-[400px] rounded-lg overflow-hidden mb-8 bg-forest-900/90 text-black p-8 bg-gray-100">
+  
+          {/* 📝 Left Side - Text Section */}
+          <div className="flex-1 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold">{collection.name}</h2>
+            <p className="text-base md:text-lg text-black max-w-md">
+              {collection.shortDescription || "Discover our exclusive handmade rugs designed to bring warmth and timeless beauty to your space."}
+            </p>
+            
+          </div>
+
+          {/* 🖼️ Right Side - Image Section */}
+          <div className="relative flex-1 h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+            <Image
+              src={collection.image || "/placeholder.jpg"}
+              alt={`${collection.name || "Collection"} banner`}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+        </div>
+
+      <div className="mb-10 w-full ">
+
+        
+
+        {/* <p className="text-md text-forest-700 max-w-4xl">
+          {collection.description}
+        </p> */}
+      </div>
+
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        {/* <div className="flex items-center gap-2 mb-6">
           <FolderOpen className="h-5 w-5 text-forest-700" />
           <h1 className="text-3xl font-serif font-bold text-forest-800">{collection.name}</h1>
-        </div>
+        </div> */}
         
-        <div className="mb-10">
-          <div className="relative h-[400px] rounded-lg overflow-hidden mb-8">
-            <div className="relative w-full h-full">
-              <Image
-                src={collection.image || "/placeholder.jpg"} // fallback if image missing
-                alt={`${collection.name || "Collection"} banner`}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-gradient-to-r from-forest-900/60 to-transparent flex items-end p-8">
-              <div className="max-w-2xl text-white">
-                <h2 className="text-2xl  font-serif font-bold mb-3">{collection.name}</h2>
-              </div>
-            </div>
-          </div>
-          <p className="text-md text-forest-700 max-w-4xl">
-            {collection.description}
-          </p>
-        </div>
+        
 
         <div className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-6 text-forest-800">Products in this Collection</h2>
@@ -162,7 +175,6 @@ export default function CollectionPage() {
                     />
                   );
                 })}
-              
           </div>
         </div>
       </div>

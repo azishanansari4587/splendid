@@ -72,7 +72,7 @@ const handleDelete = async (id) => {
             <h1 className="text-3xl font-serif font-bold text-forest-800">Projects</h1>
           </div>
           <Button asChild className="bg-primary hover:bg-forest-800">
-            <Link href="/projects/add_projects" className="flex items-center gap-2">
+            <Link href="/projects/addProject" className="flex items-center gap-2">
               <Plus className="h-4 w-4" /> Add Projects
             </Link>
           </Button>

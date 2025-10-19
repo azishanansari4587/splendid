@@ -118,9 +118,6 @@ const fetchProducts = async () => {
   });
 
 
- 
-
-
   const handleDeleteProduct = async (id) => {
     try {
       const res = await fetch(`/api/products?id=${id}`, {
@@ -168,7 +165,7 @@ const fetchProducts = async () => {
             <h1 className="text-3xl font-serif font-bold text-forest-800">Products</h1>
           </div>
           <Button asChild className="bg-primary hover:bg-forest-800">
-            <Link href="/products/add_product" className="flex items-center gap-2">
+            <Link href="/products/addProducts" className="flex items-center gap-2">
               <Plus className="h-4 w-4" /> Add Product
             </Link>
           </Button>
